@@ -14,7 +14,7 @@ return (
         <div className="px-3 cursor-pointer hover:text-rose-800">Profile</div>
         <div className="px-3 cursor-pointer hover:text-rose-800">Pricing</div>
         <div className="px-3 cursor-pointer hover:text-rose-800">Contact us</div>
-        <div className="px-3 cursor-pointer hover:text-rose-800 bg-rose-600 text-white p-2 rounded-lg">Changelog</div>
+        <div className="px-3 cursor-pointer bg-rose-600 text-white p-2 rounded-lg">Changelog</div>
       </div>
     </div>
   </div>
