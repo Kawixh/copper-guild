@@ -59,7 +59,7 @@ export const LandingPage = (props) => {
       <section className={"py-10"}>
         <div className="flex flex-col items-center">
           <div className="heading text-2xl font-semibold">
-            Logipsum is the premium insurance provider
+            Copper Guild is the premium insurance provider
           </div>
 
           <div className="border border-rose-300 my-2 w-20"></div>
