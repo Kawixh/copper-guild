@@ -6,8 +6,6 @@
 .pnp.js
 .idea
 
-/src/fonts/
-
 # testing
 /coverage
 

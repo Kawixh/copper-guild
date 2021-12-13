@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'HKGrotesk';
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 100;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-Thin.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 200;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-ExtraLight.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 300;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-Light.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 500;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-Medium.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 600;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-SemiBold.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 700;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-Bold.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 800;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-ExtraBold.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'HKGrotesk';
+  font-weight: 900;
+  src: local('HKGrotesk'), url("./HKGrotesk/WEB/HKGrotesk-Black.woff") format('woff');
+}
