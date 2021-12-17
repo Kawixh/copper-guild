@@ -1,5 +1,38 @@
 import { DoubleCheck, PeopleMultiple, ReduxFill, CodepenFill } from "akar-icons";
 import './landingPage.css';
+import * as THREE from "three";
+import { Canvas, useFrame } from "react-three-fiber";
+import { useMemo, useRef, useState } from "react";
+import text from '../../../background/text.jpeg'
+
+const Box = (props) => {
+  // This reference will give us direct access to the mesh
+  const mesh = useRef();
+
+  // Set up state for the hovered and active state
+  const [active, setActive] = useState( false );
+
+  // Rotate mesh every frame, this is outside of React without overhead
+  useFrame( () => {
+    mesh.current.rotation.x = mesh.current.rotation.y += 0.02;
+  } );
+
+  const texture = useMemo( () => new THREE.TextureLoader().load( text ), [] );
+
+  return (
+    <mesh
+      { ...props }
+      ref={ mesh }
+      scale={ active ? [3, 3, 3] : [4, 4, 4] }
+      onClick={ (e) => setActive( !active ) }
+    >
+      <boxBufferGeometry args={ [1, 1, 1] }/>
+      <meshBasicMaterial attach="material" transparent side={ THREE.DoubleSide }>
+        <primitive attach="map" object={ texture }/>
+      </meshBasicMaterial>
+    </mesh>
+  );
+}
 
 export const LandingPage = (props) => {
   return (
@@ -10,7 +43,7 @@ export const LandingPage = (props) => {
             Everything comes with a risk, <br/> that’s why we are here for you.
           </div>
 
-          <div className="border border-rose-300 my-2 w-20"></div>
+          <div className="border border-rose-300 my-2 w-20"/>
           <div className="sub text-xl">
             We take the hassle out of insurance and enable you <br/> to live life with complete peace of mind.
           </div>
@@ -63,12 +96,22 @@ export const LandingPage = (props) => {
             Copper Guild is the premium insurance provider
           </div>
 
-          <div className="border border-rose-300 my-2 w-20"></div>
+          <div className="border border-rose-300 my-2 w-20"/>
 
           <div className="subhead text-xl text-center">
             We protect your assets by capitalizing on cutting-edge technology, <br/>backed by 24x7 customer services,
             catering to your needs anytime, anywhere.
           </div>
+
+
+        <div className="py-20 my-10 items-center w-2/3 h-1/2 bg-rose-100 rounded-3xl">
+          <Canvas>
+            <ambientLight intensity={ 0.9 }/>
+            <spotLight position={ [10, 10, 10] } angle={ 0.15 } penumbra={ 2 }/>
+            <pointLight position={ [-10, -10, -10] }/>
+            <Box position={ [-1.2, 0, 0] }/>
+          </Canvas>
+        </div>
         </div>
 
         <div className="grid grid-cols-3 gap-4 px-10">
